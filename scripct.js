@@ -2,7 +2,7 @@
 let touchstartX = 0;
 let touchendX = 0;
 let hi = "anh Hùng test github";
-let hi2 = "anh Hùng test github";
+let hi2 = "anh Hùng test github hả";
 const carousel = document.getElementById('carouselExampleIndicators');
 
 carousel.addEventListener('touchstart', e => {
