@@ -1,0 +1,64 @@
+<div class="col-md-3 col-6">
+    <div class="card mb-4">
+        <img id="mainImage" src="https://pos.nvncdn.com/86c7ad-50310/art/artCT/20201204_vUqjXzej1cvtkF64hHnDcytW.jpg" class="card-img-top fixed-img" alt="Áo Khoác 1">
+        <div class="card-body">
+            <h5 class="card-title">Áo Khoác 1</h5>
+            <p class="card-text">Giá: 500,000 VNĐ</p>
+            <p class="card-text">Mô tả: Áo khoác ấm áp cho mùa đông.</p>
+        </div>
+    </div>
+
+    <!-- Hình tròn với màu nền có thể thay đổi -->
+    <div class="d-flex justify-content-center">
+        <div class="circle" data-color="yellow" onmouseover="changeImage('https://m.yodycdn.com/fit-in/filters:format(webp)/products/CVN7172-BEE,%20SMN7162-TRA%20(5).jpg', 'yellow', this)"></div>
+        <div class="circle" data-color="lightblue" onmouseover="changeImage('https://example.com/image2.jpg', 'lightblue', this)"></div>
+        <div class="circle" data-color="lightgreen" onmouseover="changeImage('https://example.com/image3.jpg', 'lightgreen', this)"></div>
+    </div>
+</div>
+
+<script>
+    function changeImage(imageSrc, color, element) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = imageSrc; // Thay đổi hình ảnh chính
+
+        // Reset màu nền cho tất cả hình tròn
+        const circles = document.querySelectorAll('.circle');
+        circles.forEach(circle => {
+            circle.style.backgroundColor = circle.getAttribute('data-color'); // Đặt màu nền từ data-color
+        });
+        
+        // Đặt màu nền cho hình tròn hiện tại
+        element.style.backgroundColor = color; // Đặt màu nền cho hình tròn hiện tại
+    }
+
+    // Hàm khởi tạo màu nền cho các hình tròn khi trang được tải
+    window.onload = function() {
+        const circles = document.querySelectorAll('.circle');
+        circles.forEach(circle => {
+            const color = circle.getAttribute('data-color'); // Lấy màu từ thuộc tính data
+            circle.style.backgroundColor = color; // Thiết lập màu nền
+        });
+    };
+</script>
+
+<style>
+    .circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease; /* Hiệu ứng chuyển tiếp */
+        /* Không cần màu nền mặc định, chỉ thiết lập màu từ data-color */
+    }
+
+    .circle:hover {
+        transform: scale(1.5); /* Phóng to hình tròn khi hover */
+    }
+
+    .fixed-img {
+        width: 100%; /* Chiều rộng 100% */
+        height: 200px; /* Chiều cao cố định */
+        object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+    }
+</style>
