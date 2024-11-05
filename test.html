@@ -1,64 +1,189 @@
-<div class="col-md-3 col-6">
-    <div class="card mb-4">
-        <img id="mainImage" src="https://pos.nvncdn.com/86c7ad-50310/art/artCT/20201204_vUqjXzej1cvtkF64hHnDcytW.jpg" class="card-img-top fixed-img" alt="Áo Khoác 1">
-        <div class="card-body">
-            <h5 class="card-title">Áo Khoác 1</h5>
-            <p class="card-text">Giá: 500,000 VNĐ</p>
-            <p class="card-text">Mô tả: Áo khoác ấm áp cho mùa đông.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Sản Phẩm Một Hàng</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-gender {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 5px; /* Adjust padding here */
+            position: relative;
+        }
+
+        .discount-badge {
+            z-index: 2;
+            position: absolute;
+            top: 25px;
+            right: 40px;
+            width: 50px;
+            height: 25px;
+            background-color: red;
+            transform: translate(50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .product-gender img.main-img {
+            z-index: 1;
+            width: 100%; /* Adjust width as needed */
+            height: 300px; /* Adjust height as needed */
+            object-fit: cover; /* Maintain aspect ratio */
+            position: relative;
+        }
+
+        .product-gender img.overlay-img {
+            z-index: 2;
+            width: 140px;
+            height: 30px; /* Adjust width as needed */
+            position: absolute;
+            bottom: 0px; /* Position at the bottom of the container */
+            left: 0px; /* Position at the left of the container */
+        }
+
+        .product-gender-price {
+            font-size: 20px;
+            color: #EBA19D;
+        }
+
+        .title-product-gender {
+            margin: 10px auto;
+            font-size: 13px;
+        }
+
+        .old-price {
+            font-size: 15px;
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .color-options {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .color-options div {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .color-option-black { background-color: black; }
+        .color-option-white { background-color: white; }
+        .color-option-brown { background-color: brown; }
+        .color-option-blue { background-color: blue; }
+        .color-option-red { background-color: red; }
+        .color-option-green { background-color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Sản phẩm 1 -->
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/docquyenonline_m2vmv0bq4uahylhe5z.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-green"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <p>Màu: </p>
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Hình tròn với màu nền có thể thay đổi -->
-    <div class="d-flex justify-content-center">
-        <div class="circle" data-color="yellow" onmouseover="changeImage('https://m.yodycdn.com/fit-in/filters:format(webp)/products/CVN7172-BEE,%20SMN7162-TRA%20(5).jpg', 'yellow', this)"></div>
-        <div class="circle" data-color="lightblue" onmouseover="changeImage('https://example.com/image2.jpg', 'lightblue', this)"></div>
-        <div class="circle" data-color="lightgreen" onmouseover="changeImage('https://example.com/image3.jpg', 'lightgreen', this)"></div>
-    </div>
-</div>
-
-<script>
-    function changeImage(imageSrc, color, element) {
-        const mainImage = document.getElementById('mainImage');
-        mainImage.src = imageSrc; // Thay đổi hình ảnh chính
-
-        // Reset màu nền cho tất cả hình tròn
-        const circles = document.querySelectorAll('.circle');
-        circles.forEach(circle => {
-            circle.style.backgroundColor = circle.getAttribute('data-color'); // Đặt màu nền từ data-color
-        });
-        
-        // Đặt màu nền cho hình tròn hiện tại
-        element.style.backgroundColor = color; // Đặt màu nền cho hình tròn hiện tại
-    }
-
-    // Hàm khởi tạo màu nền cho các hình tròn khi trang được tải
-    window.onload = function() {
-        const circles = document.querySelectorAll('.circle');
-        circles.forEach(circle => {
-            const color = circle.getAttribute('data-color'); // Lấy màu từ thuộc tính data
-            circle.style.backgroundColor = color; // Thiết lập màu nền
-        });
-    };
-</script>
-
-<style>
-    .circle {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin: 5px;
-        cursor: pointer;
-        transition: transform 0.3s ease; /* Hiệu ứng chuyển tiếp */
-        /* Không cần màu nền mặc định, chỉ thiết lập màu từ data-color */
-    }
-
-    .circle:hover {
-        transform: scale(1.5); /* Phóng to hình tròn khi hover */
-    }
-
-    .fixed-img {
-        width: 100%; /* Chiều rộng 100% */
-        height: 200px; /* Chiều cao cố định */
-        object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
-    }
-</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

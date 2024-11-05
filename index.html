@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
     <style>
          .nav-link {
             border-radius: 20px; /* Bo tròn */
@@ -39,56 +40,26 @@
     <div class="container">
     <!-- menu navbar start -->
     
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <!-- <img src="./image/2024-10-31_15-52.png" alt="Logo" class="navbar-logo">
-                Tên Trang -->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="./image/2024-10-31_15-47.png" alt="Action" class="img-fluid me-2" style="width: 20px; height: 20px;"> Action
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="https://via.placeholder.com/20" alt="Another action" class="img-fluid me-2" style="width: 20px; height: 20px;"> Another action
-                                </a>
-                            </li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="https://via.placeholder.com/20" alt="Something else" class="img-fluid me-2" style="width: 20px; height: 20px;"> Something else here
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Brand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
         </div>
     </nav>
+    <br>
                       <hr>
     <!-- menu navbar end -->
     <!-- slide start -->
@@ -135,7 +106,7 @@
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="winter" role="tabpanel" aria-labelledby="winter-tab">
+        <div class="tab-pane fade show active " id="winter" role="tabpanel" aria-labelledby="winter-tab">
             <div class="row mt-3 g-2">
                 <div class="col-md-3 col-6">
                     <div class="card mb-4">
@@ -159,7 +130,7 @@
                 </div>
                 <div class="col-md-3 col-6">
                     <div class="card mb-4">
-                        <img src="https://pos.nvncdn.com/86c7ad-50310/art/artCT/20201204_vUqjXzej1cvtkF64hHnDcytW.jpg" class="card-img-top fixed-img" alt="Áo Khoác 2">
+                        <img src="https://pos.nvncdn.com/86c7ad-50310/art/artCT/20201204_vUqjXzej1cvtkF64hHnDcytW.jpg" class="card-img-top fixed-img" alt="Áo Khoác 2" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Áo Khoác 2</h5>
                             <p class="card-text">Giá: 600,000 VNĐ</p>
@@ -235,37 +206,776 @@
         </div>
     </div>
     <!-- product list end-->
-    
+  <!-- sale start -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container-sale">
+                <div class="img-sale">
+                    <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/Frame%201000007467.png" alt="">
+                </div>
+                <div class="text-sale">Đặc quyền website <span>Kết thúc sau </span></div>
+                <div id="countdown">
+                    <div id='tiles'></div>
+                    <div class="labels">
+                      <li>Days</li>
+                      <li>Hours</li>
+                      <li>Mins</li>
+                      <li>Secs</li>
+                    </div>
+                </div>
+                <!-- product sale -->
+                <section class="flash-sale">  
+                    <button class="to-left" style="display: none;">
+                        <i class="fas fa-chevron-circle-left"></i>
+                    </button>
+                    <button class="to-right">
+                            <i class="fas fa-chevron-circle-right"></i>
+                    </button>
+                    <div class="prod-bar">
+                            <a href="#">
+                                    <div class="contain-prod">
+                                            <div class="contain-img">
+                                                    <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/apm3299-vag-7.jpg" alt="">
+                                                    <div class="sale-percent">-30%</div>
+                                            </div>
+                                            <div class="prod-name">Điều kỳ diệu ở tiệm tạp hóa Namiya</div>
+                                            <div class="price">
+                                                    <div class="sale-price">185.000đ</div>
+                                                    <div class="real-price">268.000đ</div>
+                                            </div>
+                                            <div class="sold">
+                                                    <div class="sold-progress" style="width: 34%;"></div>
+                                                    <span>Đã Bán 42</span>
+                                            </div>
+                                    </div>
+                            </a>
+                            <a href="#">
+                                    <div class="contain-prod">
+                                            <div class="contain-img">
+                                                    <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-polo-nam-apm3519-tit-8-yodyvn-37aff9b7-3131-4177-9d37-85ff05249575.jpg" alt="">
+                                                    <div class="sale-percent">-30%</div>
+                                            </div>
+                                            <div class="prod-name">Không Phải Sói Nhưng Cũng Đừng Là Cừu</div>
+                                            <div class="price">
+                                                    <div class="sale-price">185.000đ</div>
+                                                    <div class="real-price">268.000đ</div>
+                                            </div>
+                                            <div class="sold">
+                                                    <div class="sold-progress" style="width: 20%;"></div>
+                                                    <span>Đã Bán 42</span>
+                                            </div>
+                                    </div>
+                            </a>
+                            <a href="#">
+                                    <div class="contain-prod">
+                                            <div class="contain-img">
+                                                    <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/sam5039-tit-8.jpg" alt="">
+                                                    <div class="sale-percent">-14%</div>
+                                            </div>
+                                            <div class="prod-name">Nóng Giận Là Bản Năng , Tĩnh Lặng Là Bản Lĩnh</div>
+                                            <div class="price">
+                                                    <div class="sale-price">185.000đ</div>
+                                                    <div class="real-price">268.000đ</div>
+                                            </div>
+                                            <div class="sold">
+                                                    <div class="sold-progress" style="width: 30%;"></div>
+                                                    <span>Đã Bán 42</span>
+                                            </div>
+                                    </div>
+                            </a>
+                            <a href="#">
+                                    <div class="contain-prod">
+                                            <div class="contain-img">
+                                                    <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/100/438/408/products/tsn6098-xla-qjn4022-dni-4-ao-thun-nu-yody-1.jpg?v=1684827351930" alt="">
+                                                    <div class="sale-percent">-20%</div>
+                                            </div>
+                                            <div class="prod-name">Điềm Tĩnh & Nóng Giận</div>
+                                            <div class="price">
+                                                    <div class="sale-price">185.000đ</div>
+                                                    <div class="real-price">268.000đ</div>
+                                            </div>
+                                            <div class="sold">
+                                                    <div class="sold-progress" style="width: 30%;"></div>
+                                                    <span>Đã Bán 2</span>
+                                            </div>
+                                    </div>
+                            </a>
+                            <a href="#">
+                                    <div class="contain-prod">
+                                            <div class="contain-img">
+                                                    <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/100/438/408/products/ao-thun-nu-tsn6294-bee-7.jpg?v=1690163509037" alt="">
+                                                    <div class="sale-percent">-32%</div>
+                                            </div>
+                                            <div class="prod-name">Tư Duy Mở</div>
+                                            <div class="price">
+                                                    <div class="sale-price">185.000đ</div>
+                                                    <div class="real-price">268.000đ</div>
+                                            </div>
+                                            <div class="sold">
+                                                    <div class="sold-progress" style="width: 30%;"></div>
+                                                    <span>Đã Bán 42</span>
+                                            </div>
+                                    </div>
+                            </a>
+                            <a href="#">
+                                    <div class="contain-prod">
+                                            <div class="contain-img">
+                                                    <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/tshirt-nu-thun-om-vai-zip-tsn6290-tra-3.jpg" alt="">
+                                                    <div class="sale-percent">-26%</div>
+                                            </div>
+                                            <div class="prod-name">Tư Duy Ngược</div>
+                                            <div class="price">
+                                                    <div class="sale-price">155.000đ</div>
+                                                    <div class="real-price">208.000đ</div>
+                                            </div>
+                                            <div class="sold">
+                                                    <div class="sold-progress" style="width: 30%;"></div>
+                                                    <span>Đã Bán 42</span>
+                                            </div>
+                                    </div>
+                            </a>
+                            <a href="#">
+                                    <div class="contain-prod">
+                                            <div class="contain-img">
+                                                    <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/apn6254-tra-qjn4002-xnh-10.jpg" alt="">
+                                                    <div class="sale-percent">-42%</div>
+                                            </div>
+                                            <div class="prod-name">Lý Thuyết Trò Chơi</div>
+                                            <div class="price">
+                                                    <div class="sale-price">65.000đ</div>
+                                                    <div class="real-price">158.000đ</div>
+                                            </div>
+                                            <div class="sold">
+                                                    <div class="sold-progress" style="width: 30%;"></div>
+                                                    <span>Đã Bán 42</span>
+                                            </div>
+                                    </div>
+                            </a>
+                            <a href="#">
+                                    <div class="contain-prod">
+                                            <div class="contain-img">
+                                                    <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-polo-nu-apn5380-nav-qjn3072-bsa-8-yodyvn.jpg" alt="">
+                                                    <div class="sale-percent">-42%</div>
+                                            </div>
+                                            <div class="prod-name">Đi Tìm Lẽ Sống</div>
+                                            <div class="price">
+                                                    <div class="sale-price">65.000đ</div>
+                                                    <div class="real-price">158.000đ</div>
+                                            </div>
+                                            <div class="sold">
+                                                    <div class="sold-progress" style="width: 30%;"></div>
+                                                    <span>Đã Bán 42</span>
+                                            </div>
+                                    </div>
+                            </a>
+                    </div>
+            </section>   
+                         
+            <!-- product sale end -->            
+            </div>
+        </div>
+    </div>
+  <!-- sale end -->
+  <!-- bộ sưu tập outstand -->
+    <h2 style="text-align: center; margin:10px auto;">Bộ sưu tập nổi bật</h2>
+    <div class="row container-outstand">
+        <div class="col-md-3 col-12 prod-outstand">
+            <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/Group%204.png"  alt="..." class="img-outstand">
+                <div class="card-body">
+                    <h5 class="card-title-outstand">Áo giữ nhiệt XTRA-HEAT™</h5>
+                    <p class="card-text-outstand">Công nghệ khóa ấm, hạn chế thoát nhiệt tự động, hạn chế tĩnh điện mùa đông..</p>
+                    <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+                </div>
+        </div>
+        <div class="col-md-3 col-12 prod-outstand">
+            <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ATN7026,%20QJN7014,%20ATM7011,%20QJM70450055.jpg" class="img-outstand" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title-outstand">Áo giữ nhiệt XTRA-HEAT™</h5>
+                    <p class="card-text-outstand">Công nghệ khóa ấm, hạn chế thoát nhiệt tự động, hạn chế tĩnh điện mùa đông..</p>
+                    <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+                </div>
+        </div>
+        <div class="col-md-3 col-12 prod-outstand">
+            <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/AKM6017-NAU%20SKM7003-NAV%20QKM7007-NAU%20(5).jpg" class="img-outstand" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title-outstand">Áo giữ nhiệt XTRA-HEAT™</h5>
+                    <p class="card-text-outstand">Công nghệ khóa ấm, hạn chế thoát nhiệt tự động, hạn chế tĩnh điện mùa đông..</p>
+                    <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+                </div>
+        </div>
+        <div class="col-md-3 col-12 prod-outstand">
+            <img src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/SMM7007-TRA%20QAM7027-TIT%20(1).jpg" class="img-outstand" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title-outstand">Áo giữ nhiệt XTRA-HEAT™</h5>
+                    <p class="card-text-outstand">Công nghệ khóa ấm, hạn chế thoát nhiệt tự động, hạn chế tĩnh điện mùa đông..</p>
+                    <a href="#" class="btn btn-primary button-outstand">Tìm hiểu thêm</a>
+                </div>
+        </div>
+    </div>
+ <!-- bộ sưu tập outstand end-->
+ <div class="banner2">
+    <a href="">
+        <img class="responsive-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)//products/BANNER%20COLLECTION%201800X600px%20CTA.png" alt="">
+    </a>
 </div>
 
+<!-- sản phẩm theo nam và nữa -->
+<ul class="nav d-flex justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="male-tab" data-bs-toggle="tab" href="#male" role="tab" aria-controls="male" aria-selected="true">Đồ Nam</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" id="female-tab" data-bs-toggle="tab" href="#female" role="tab" aria-controls="female" aria-selected="false">Đồ Nữ</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="male" role="tabpanel" aria-labelledby="male-tab">
+        <h2>Đây là đồ Nam</h2>
+        <div class="row">
+            <!-- Sản phẩm 1 -->
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/docquyenonline_m2vmv0bq4uahylhe5z.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-green"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <p>Màu: </p>
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Sản phẩm 1 -->
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/docquyenonline_m2vmv0bq4uahylhe5z.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-green"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <p>Màu: </p>
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Sản phẩm 1 -->
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/docquyenonline_m2vmv0bq4uahylhe5z.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-green"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <p>Màu: </p>
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="tab-pane fade" id="female" role="tabpanel" aria-labelledby="female-tab">
+        <h2>Đây là đồ Nữ</h2>
+        <div class="row">
+            <!-- Sản phẩm 1 -->
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/docquyenonline_m2vmv0bq4uahylhe5z.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-green"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <p>Màu: </p>
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Sản phẩm 1 -->
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/docquyenonline_m2vmv0bq4uahylhe5z.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-green"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <p>Màu: </p>
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Sản phẩm 1 -->
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/docquyenonline_m2vmv0bq4uahylhe5z.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-green"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <p>Màu: </p>
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-6 product-gender">
+                <div class="discount-badge">-5%</div>
+                <div class="image-container">
+                    <img class="main-img" src="https://m.yodycdn.com/fit-in/filters:format(webp)/products/ao-thun-thu-dong-giu-nhiet-nu-yody-ATN7009-XAM,%20CJN6008-XDM%20(4).JPG" alt="product-gender 1">
+                    <img class="overlay-img" src="https://m.yodycdn.com/products/nguyengia_m2vmwldeeh929sdrxig.png" alt="Overlay">
+                </div>
+                <p class="title-product-gender">Set Nữ Áo Tay Dài Kèm Chân Váy Ly</p>
+                <p class="product-gender-price">284.050 ₫ <span class="old-price">299.000 ₫</span></p>
+                <div class="color-options">
+                    <div class="color-option-black"></div>
+                    <div class="color-option-white"></div>
+                    <div class="color-option-brown"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- hover đổi ảnh -->
     <script>
-        function changeImage(imageSrc, color, element) {
-        const mainImage = document.getElementById('mainImage');
-        mainImage.src = imageSrc; // Thay đổi hình ảnh chính
-
-        // Reset màu nền cho tất cả hình tròn
-        const circles = document.querySelectorAll('.circle');
-        circles.forEach(circle => {
-            circle.style.backgroundColor = circle.getAttribute('data-color'); // Đặt màu nền từ data-color
-        });
-        
-        // Đặt màu nền cho hình tròn hiện tại
-        element.style.backgroundColor = color; // Đặt màu nền cho hình tròn hiện tại
-    }
-
-    // Hàm khởi tạo màu nền cho các hình tròn khi trang được tải
-    window.onload = function() {
-        const circles = document.querySelectorAll('.circle');
-        circles.forEach(circle => {
-            const color = circle.getAttribute('data-color'); // Lấy màu từ thuộc tính data
-            circle.style.backgroundColor = color; // Thiết lập màu nền
-        });
-    };
+       
     </script>
-    <!-- <script src="./scripct.js"></script> -->
+    <script src="./scripct.js"></script>
 </body>
 </html>
